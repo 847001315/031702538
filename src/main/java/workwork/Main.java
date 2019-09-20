@@ -282,34 +282,34 @@ public class Main {
 		boolean find=false;
 		
 			LocalUtil lu =  new LocalUtil();
-			
-			if(city.equals("") || city==null){
-				List<String> list1 =lu.getCities("中国", provine);
-				for( j=0;j<list1.size();j++ ){
-					List<String> list =lu.getqus("中国",provine,list1.get(j));
-					String[] strlist={""};
-					for(i=0; i<list.size(); i++){
-						strlist =dizhi.split(list.get(i),2);
-						if(strlist[0].equals(dizhi)){
-						}else{
-							find=true;
-							break;
-						}
-					}
-					if(find==true){
-						qu=list.get(i);
-						if(strlist[1].charAt(0)=='市'){
-							dizhi=strlist[1].substring(1);
-						}else{
-							dizhi=strlist[1];
-						}
-					}
-					else {
-						qu="";
-					}
-				}
-				
-			}else{
+//			
+//			if(city.equals("") || city==null){
+//				List<String> list1 =lu.getCities("中国", provine);
+//				for( j=0;j<list1.size();j++ ){
+//					List<String> list =lu.getqus("中国",provine,list1.get(j));
+//					String[] strlist={""};
+//					for(i=0; i<list.size(); i++){
+//						strlist =dizhi.split(list.get(i),2);
+//						if(strlist[0].equals(dizhi)){
+//						}else{
+//							find=true;
+//							break;
+//						}
+//					}
+//					if(find==true){
+//						qu=list.get(i);
+//						if(strlist[1].charAt(0)=='市'){
+//							dizhi=strlist[1].substring(1);
+//						}else{
+//							dizhi=strlist[1];
+//						}
+//					}
+//					else {
+//						qu="";
+//					}
+//				}
+//				
+//			}else{
 				List<String> list =lu.getqus("中国",provine,city);
 			String[] strlist={""};
 			for(i=0; i<list.size(); i++){
@@ -331,7 +331,7 @@ public class Main {
 			else {
 				qu="";
 			}
-			}
+			//}
 			
 			
 		
