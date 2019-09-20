@@ -27,7 +27,7 @@ dependencies {
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
-    compile files('lib/dom4j/dom4j-1.6.1.jar')
+    compile files('lib/dom4j-2.1.1.jar')
 }
 test {
     useJUnitPlatform()
@@ -42,7 +42,7 @@ shadowJar {
     archivesBaseName = "addressbook"
     classifier(null)
     manifest {
-        attributes 'Main-Class': 'main.Main'
+       attributes 'Main-Class': 'workwork.Main'
     }
 }
 assemble.dependsOn(shadowJar)

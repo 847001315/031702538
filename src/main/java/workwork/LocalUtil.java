@@ -10,7 +10,7 @@ import org.dom4j.io.SAXReader;
 
 public class LocalUtil {
 	//各地区xml文件路径
-		private static final String LOCAL_LIST_PATH = "config/LocList1.xml";
+		//private static final String LOCAL_LIST_PATH = "config/LocList1.xml";
 		//所有国家名称List
 		private static final List<String> COUNTRY_REGION = new ArrayList<String>();
 		private static LocalUtil localutil;
@@ -23,7 +23,9 @@ public class LocalUtil {
 			//1.读取
 			reader = new SAXReader();
 			try {
-				document = reader.read(LOCAL_LIST_PATH);		
+				//document = reader.read(LOCAL_LIST_PATH);		
+				document = reader.read(LocalUtil.class.getClassLoader().getResourceAsStream("LocList1.xml"));
+	
 			} catch (DocumentException e) {
 				e.printStackTrace();
 			}
